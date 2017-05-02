@@ -2,7 +2,7 @@
 require_once 'bootstrap.php';
 
 $url = SERVICE1_URL;
-//$storage = Storage::getInstance();
+$storage = Storage::getInstance();
 
 $fetcher = new Fetcher($url);
 $unparsedData = $fetcher->fetch();

@@ -5,7 +5,9 @@ class Storage{
 	private $db;
 	private static $_instance = null;
 	
-	private function __construct() {}
+	private function __construct() {
+		$this->initConnection();
+	}
 	
 	protected function __clone() {}
 	
@@ -13,7 +15,6 @@ class Storage{
 	{
 		if(is_null(self::$_instance)){
 			self::$_instance = new self();
-			self::$_instance->initConnection();
 		}
 		
 		return self::$_instance;
