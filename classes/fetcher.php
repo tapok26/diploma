@@ -4,11 +4,11 @@ class Fetcher {
 	protected $source;
 	
 	public function __construct($url) {
-		$this->source = $url;
+		$this->source = $url;		
 	}
 	
-	public function fetch( $url ){
-		
+	public function fetch_curl( $url )
+	{
 		if(!$url)
 			$url = $this->source;
 		
@@ -35,5 +35,15 @@ class Fetcher {
 		$header['errmsg']  = $errmsg;
 		$header['content'] = $content;
 		return $header;
+	}
+	
+	public function fetch( $url )
+	{
+		if(!$url)
+			$url = $this->source;
+		
+		$html = file_get_contents($url);
+		
+		return $html;
 	}
 }

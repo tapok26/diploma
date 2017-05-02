@@ -1,8 +1,8 @@
-<?php 
-require_once 'libs/simple_html_dom.php';
-require_once 'vars.php';
-require_once 'utils.php';
-require_once 'fetcher.php';
-require_once 'parser.php';
-
+<?php
+require_once 'vendor/autoload.php';
+require_once 'tools/vars.php';
+require_once 'tools/utils.php';
+require_once 'classes/fetcher.php';
+require_once 'classes/parser.php';
+require_once 'classes/storage.php';
 ?>
